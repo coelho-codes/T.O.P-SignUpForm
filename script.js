@@ -8,4 +8,12 @@ submitButton.addEventListener('click', (event) => {
         alert('The passwords don\'t match');
         event.preventDefault(); 
     }
-});
+})
+
+confirmPassword.addEventListener('input', () => {
+    if(confirmPassword.value !== password.value) {
+        confirmPassword.style.border = '1px solid #de4040';
+    } else {
+        confirmPassword.style.border = '1px solid #E5E7EB';
+    }
+})
